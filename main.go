@@ -63,6 +63,10 @@ func main() {
 			return
 		}
 
+		if !strings.Contains(s, "AUDIO_FEED") && !includeInternal {
+			return
+		}
+
 		if dedupe {
 			if _, ok := subs[s]; ok {
 				return
